@@ -12,9 +12,10 @@ Aklatan is a comprehensive library management system designed to simplify the ma
 To set up the Aklatan Library Management System:
 1. Clone the repository to your local machine.
 2. Turn on the Apache Server and MySQL Database in the XAMPP Control Panel
-2. Configure the database connection in /config/database.php.
-3. Import the provided SQL schema in the root file to create the necessary database tables.
-4. Access the application via your web server and log in with Admin or Librarian credentials.
+3. Configure the database connection in /config/database.php.
+4. Import the provided SQL schema in the root file to create the necessary database tables.
+5. Move your folder to the htdocs folder in the XAMPP installation directory.
+6. Access the application via your web server and log in with Admin or Librarian credentials.
 
 
 ## Conclusion
