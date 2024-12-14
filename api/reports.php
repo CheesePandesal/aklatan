@@ -20,7 +20,7 @@ $selectedFilter = $_GET['selectedFilter'] ?? null;
 // If a filter is selected, modify the SQL query
 
 if ($selectedFilter === 'Available') {
-    $sql = "SELECT * FROM tbl_book WHERE book_status = 'Available'";
+    $sql = "SELECT * FROM tbl_book WHERE book_status = 'Available' ORDER BY book_id DESC";
     // Prepare and execute the query
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -30,7 +30,7 @@ if ($selectedFilter === 'Available') {
     echo json_encode($books);
     exit;
 } else if ($selectedFilter === 'Borrowed') {
-    $sql = "SELECT * FROM tbl_book WHERE book_status = 'Borrowed'";
+    $sql = "SELECT * FROM tbl_book WHERE book_status = 'Borrowed' ORDER BY book_id DESC";
     // Prepare and execute the query
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -40,7 +40,7 @@ if ($selectedFilter === 'Available') {
     echo json_encode($books);
     exit;
 } else {
-    $sql = "SELECT * FROM tbl_book";
+    $sql = "SELECT * FROM tbl_book ORDER BY book_id DESC";
     // Prepare and execute the query
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

@@ -77,7 +77,7 @@ function getUsers($pdo)
             exit;
         } elseif ($searchQuery) {
             //sql
-            $sql = "SELECT * FROM tbl_user WHERE username LIKE :searchQuery OR user_email LIKE :searchQuery";
+            $sql = "SELECT * FROM tbl_user WHERE username LIKE :searchQuery OR user_email LIKE :searchQuery ORDER BY user_id DESC";
             //prepare
             $stmt = $pdo->prepare($sql);
             //bind
@@ -90,7 +90,7 @@ function getUsers($pdo)
             exit;
         } else {
             //sql
-            $sql = "SELECT * FROM tbl_user";
+            $sql = "SELECT * FROM tbl_user ORDER BY user_id DESC";
             //prepare
             $stmt = $pdo->prepare($sql);
             //execute

@@ -32,7 +32,7 @@ function getBooks($pdo)
         $sql = "SELECT book_id, book_title, book_author, book_publisher, book_publication_year, book_status, 
                 DATE_FORMAT(book_borrowed_date, '%Y-%m-%d %H:%i:%s') as book_borrowed_date,
                 DATE_FORMAT(book_returned_date, '%Y-%m-%d %H:%i:%s') as book_returned_date
-                FROM tbl_book";
+                FROM tbl_book ORDER BY book_id DESC";
         $stmt = $pdo->prepare($sql);
     }
 

@@ -90,7 +90,7 @@ function getBooks($pdo)
             exit;
         } elseif ($searchQuery) {
             //sql
-            $sql = "SELECT * FROM tbl_book WHERE book_title LIKE :searchQuery OR book_author LIKE :searchQuery OR book_publisher LIKE :searchQuery OR book_publication_year LIKE :searchQuery";
+            $sql = "SELECT * FROM tbl_book WHERE book_title LIKE :searchQuery OR book_author LIKE :searchQuery OR book_publisher LIKE :searchQuery OR book_publication_year LIKE :searchQuery ORDER BY book_id DESC";
             //prepare
             $stmt = $pdo->prepare($sql);
             //bind
@@ -103,7 +103,7 @@ function getBooks($pdo)
             exit;
         } else {
             //sql
-            $sql = "SELECT * FROM tbl_book";
+            $sql = "SELECT * FROM tbl_book ORDER BY book_id DESC";
             //prepare
             $stmt = $pdo->prepare($sql);
             //execute
