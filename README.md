@@ -1,6 +1,6 @@
 # Aklatan
 
-## Overview anlala putanginamo
+## Overview
 
 Aklatan is a comprehensive library management system designed to simplify the management of library resources and user interactions. Built using PHP, JavaScript, and CSS, Aklatan features a user-friendly interface and solid functionality for both Admins and Librarians.
 
